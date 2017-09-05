@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "FormDetails";
+}
+
+@model  IsBasvurusu.Models.FormTab
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+                margin: 0;
+                padding: 0;
+        }
+
+          body {
+                font: 13px "Trebuchet MS", Arial, Helvetica, sans-serif;
+                background: #EEE;
+        }
+table {
+width: 600px;
+margin: 200px auto;
+table-layout: auto;
+align:left;
+border-collapse: collapse;
+
+}
+
+ tr:nth-child(odd) {
+    background: #DDD;
+  }
+th {
+                padding: 8px;
+                background: #0DD;
+        }
+    </style>
+</head>
+<body>
+    <h3>Form Detay Sayfası</h3>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Form Dolduran Kişinin Detaylı Bilgileri</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ad  </td>
+                        <td>@Model.firstName</td>
+                    </tr>
+                    <tr>
+                        <td>Soyad  </td>
+                        <td>@Model.lastName</td>
+                    </tr>
+                    <tr>
+                        <td>Cinsiyet  </td>
+                        <td>@Model.gender</td>
+                    </tr>
+                    <tr>
+                        <td>Doğum Günü  </td>
+                        <td>@Model.birthDay</td>
+                    </tr>
+                    <tr>
+                        <td>Telefon Numarası  </td>
+                        <td>@Model.phoneNumber</td>
+                    </tr>
+                    <tr>
+                        <td>Okul Adı  </td>
+                        <td>@Model.school</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Mail Adresi  </td>
+                        <td>@Model.adminMail</td>
+                    </tr>
+                    <tr> @* buraya bir text area eklenecek. et işaretlerini silince yorum
+                             satırı kalkar. textareadki mesajı alacaksın message olarak yanıtla butonu için**@
+                        <td></td>
+                        <td><button type="submit">Yanıtla</button></td>
+                    </tr>
+                </tbody>
+            </table>
+</body>
+</html>

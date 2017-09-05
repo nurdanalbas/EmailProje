@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IsBasvurusuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="FormTab">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="firstName" Type="varchar" MaxLength="50" />
+    <Property Name="lastName" Type="varchar" MaxLength="50" />
+    <Property Name="birthDay" Type="varchar" MaxLength="50" />
+    <Property Name="gender" Type="varchar" MaxLength="50" />
+    <Property Name="emailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="phoneNumber" Type="varchar" MaxLength="50" />
+    <Property Name="school" Type="varchar" MaxLength="50" />
+    <Property Name="degree" Type="varchar" MaxLength="50" />
+    <Property Name="Attachment" Type="image" />
+    <Property Name="message" Type="varchar" MaxLength="100" />
+    <Property Name="adminMail" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LoginTab">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="userName" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="IsBasvurusuModelStoreContainer">
+    <EntitySet Name="FormTab" EntityType="Self.FormTab" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoginTab" EntityType="Self.LoginTab" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

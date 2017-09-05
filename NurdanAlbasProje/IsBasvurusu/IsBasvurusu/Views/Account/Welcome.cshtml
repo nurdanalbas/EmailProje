@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Mail Sayfası";
+}
+
+<h2>Welcome</h2>
+
+html>
+<head>
+    <meta name="viewport" content="width-device-width" />
+    <body>
+        Welcome @Session["username"]
+        </br>
+        @Html.ActionLink("Logout", "Logout", "Account")
+    </body>
+
+</head>
+</html>

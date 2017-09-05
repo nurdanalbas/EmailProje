@@ -1,0 +1,90 @@
+﻿@model IsBasvurusu.Models.FormTab
+@{
+    ViewBag.Title = "FormPage";
+}
+
+<meta name="viewport" content="width-device-width" />
+<body>
+
+    @using (Html.BeginForm("Form", "Home", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+    {
+
+        <body>
+            <div class="container">
+                <form class="form-signin">
+                    <h2 class="form-signin-heading">Form Page</h2>
+                    <table align="left">
+                        <tr>
+                            <td><b>Subject   </b></td>
+                            <td>@Html.EditorFor(model => model.subject)</td>
+                        </tr>
+                        <br />
+                        <tr>
+                            <td><b>First Name  </b></td>
+                            <td>@Html.EditorFor(model => model.firstName)</td>
+                        </tr>
+                        <tr>
+                            <td><b>Last Name  </b></td>
+                            <td>@Html.EditorFor(model => model.lastName)</td>
+                        </tr>
+                        <tr>
+                            <td><b>Gender  </b></td>
+                            <td>@Html.EditorFor(model => model.gender)</td>
+                        </tr>
+                        <tr>
+                            <td><b>Phone Nuber  </b></td>
+                            <td>@Html.EditorFor(model => model.phoneNumber)</td>
+                        </tr>
+                        <tr>
+                            <td><b>School </b></td>
+                            <td>@Html.EditorFor(model => model.school)</td>
+                        </tr>
+                        <tr>
+                            <td><b>Diploma Grade  </b></td>
+                            <td>@Html.EditorFor(model => model.degree)</td>
+                        </tr>
+                        <tr>
+                            <td><b>Mail Address  </b></td>
+                            <td>@Html.EditorFor(model => model.adminMail)</td>
+                        </tr>
+                        <tr>
+                            <td><b>Password </b></td>
+                            <td>@Html.PasswordFor(model => model.password)</td>
+                        </tr>
+                        <tr>
+                            <td><b>Message  </b></td>
+                            <td>@Html.EditorFor(model => model.message)</td>
+                        </tr>
+                        <tr>
+                            <td><b> File Attachment:</b></td>
+                            <td>
+                                @Html.TextBoxFor(model => model.attachment, new { type = "file" })
+                            </td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td>
+                                <button class="btn btn-primary" type="submit">Send<a value="formGonder"></a></button>
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </form>
+            </div>
+
+
+        </body>
+
+    }
+</body>
+
+                        </head>
+
+
+
+
+</html>

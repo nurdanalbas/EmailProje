@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "Panel";
+}
+@model List<IsBasvurusu.Models.FormTab>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Dashboard</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/signin.css" rel="stylesheet">
+</head>
+<body>
+@using (Html.BeginForm("Panel", "Panel", FormMethod.Get))
+{
+    <h3>Panel Page</h3>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Gelen Kutusu <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/Account/Logout">Çıkış Yap <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
+                <div class="table-responsive">
+                    @if (Model.Count > 0)
+                    {
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                    <th>Subject</th>
+                                    <th>Detail</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (IsBasvurusu.Models.FormTab item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @item.firstName
+                                        </td>
+                                        <td>
+                                            @item.adminMail
+                                        </td>
+                                        <td>
+                                            @item.message
+                                        </td>
+                                        <td>
+                                            <a href="/Panel/Panel/@item.userId">Detay</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+
+                          </table>
+                    }
+                    else
+                    {
+                        <p>No data!!</p>
+
+                    }
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+}
+</body>
+</html>

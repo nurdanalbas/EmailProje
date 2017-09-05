@@ -1,0 +1,64 @@
+﻿@model IsBasvurusu.Models.LoginTable
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width-device-width" />
+    <body>
+        <div class="row">
+            <div class="col-lg-6" background="white">
+                <img alt="login" src="~/photo/login.png" height="150px;" width="150px;">
+                
+
+         </div>
+            <div class="col-lg-6">
+                @using (Html.BeginForm("Login", "Account"))
+                {
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Bootstrap Snippet: Login Form</title>
+
+
+                        <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css'>
+
+                        <link rel="stylesheet" href="css/style.css">
+
+
+                    </head>
+
+                    <body>
+                        <div class="wrapper">
+                            <form class="form-signin">
+                                <h2 class="form-signin-heading" align="left">Login</h2>
+                                <table cellpadding="2" cellspacing="2">
+                                    <tr>
+                                        <td>Username   </td>
+                                        <td>@Html.TextBoxFor(model => model.userName)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Password   </td>
+                                        <td>@Html.PasswordFor(model => model.password)</td>
+                                    </tr>
+                                    <tr>&nbsp;</tr>
+                                </table>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+                                </label>
+                                <button class="button"><a value="Login">Giriş Yap</a></button>
+                            </form>
+                        </div>
+
+
+                    </body>
+
+                }
+    </body>
+
+</head>
+</html>
+
+
+

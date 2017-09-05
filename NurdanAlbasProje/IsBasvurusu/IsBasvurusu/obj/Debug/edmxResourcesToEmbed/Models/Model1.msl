@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IsBasvurusuModelStoreContainer" CdmEntityContainer="IsBasvurusuEntities4">
+    <EntitySetMapping Name="FormTabs">
+      <EntityTypeMapping TypeName="IsBasvurusuModel.FormTab">
+        <MappingFragment StoreEntitySet="FormTab">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="birthDay" ColumnName="birthDay" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="emailAddress" ColumnName="emailAddress" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="school" ColumnName="school" />
+          <ScalarProperty Name="degree" ColumnName="degree" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="adminMail" ColumnName="adminMail" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginTables">
+      <EntityTypeMapping TypeName="IsBasvurusuModel.LoginTable">
+        <MappingFragment StoreEntitySet="LoginTable">
+          <ScalarProperty Name="kID" ColumnName="kID" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
